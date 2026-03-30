@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
         val edtDay = findViewById<EditText>(R.id.edtText)
         val btnReset = findViewById<Button>(R.id.btnReset)
         val btnDisplay = findViewById<Button>(R.id.btnClick)
-        val txtEnter = findViewById<TextView>(R.id.txtDisplay) 
+        val txtEnter = findViewById<TextView>(R.id.txtDisplay)
 
 
         btnDisplay.setOnClickListener {
@@ -27,5 +27,10 @@ class MainActivity : AppCompatActivity() {
 
             if (social.isEmpty()) {
                 txtEnter.text = "Please enter a time of day"
+                txtEnter.setTextColor(Color.RED)
+            } else if (social == "Morning") {
+                txtEnter.text = "Send a Good Morning text to a family member"
+                txtEnter.setTextColor(Color.BLUE)
+
     }
 }
