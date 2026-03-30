@@ -1,5 +1,6 @@
 package com.example.assignment1
 
+import android.graphics.Color
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -15,9 +16,16 @@ class MainActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
 
-        val edtDay = findViewById<EditText>(R.id.edtText) //Variable for Input
-        val btnReset = findViewById<Button>(R.id.btnReset) //Variable to Reset the app
-        val btnDisplay = findViewById<Button>(R.id.btnClick) //Variable to Display
-        val txtEnter = findViewById<TextView>(R.id.txtDisplay) //Variable for Output
+        val edtDay = findViewById<EditText>(R.id.edtText)
+        val btnReset = findViewById<Button>(R.id.btnReset)
+        val btnDisplay = findViewById<Button>(R.id.btnClick)
+        val txtEnter = findViewById<TextView>(R.id.txtDisplay) 
+
+
+        btnDisplay.setOnClickListener {
+            val social = edtDay.text.toString().trim()
+
+            if (social.isEmpty()) {
+                txtEnter.text = "Please enter a time of day"
     }
 }
