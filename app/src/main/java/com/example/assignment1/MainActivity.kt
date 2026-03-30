@@ -48,7 +48,7 @@ class MainActivity : AppCompatActivity() {
                 txtEnter.setTextColor(Color.BLACK)
             } else {
                 txtEnter.text = "Input Invalid!"
-                txtEnter.setTextColor(Color.BLACK) 
+                txtEnter.setTextColor(Color.BLACK)
             }
         }
 
