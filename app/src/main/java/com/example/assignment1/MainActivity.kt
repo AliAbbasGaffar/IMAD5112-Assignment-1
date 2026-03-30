@@ -39,6 +39,18 @@ class MainActivity : AppCompatActivity() {
                 txtEnter.setTextColor(Color.parseColor("#A52A2A"))
             } else if (social == "Afternoon Snack time"){
                 txtEnter.text = "Send a quick thinking of you message"
-                txtEnter.setTextColor(Color.parseColor("#FFA500")) 
+                txtEnter.setTextColor(Color.parseColor("#FFA500"))
+            }else if (social == "Dinner") {
+                txtEnter.text = "Call a friend or relative for a 5 minute catch-up"
+                txtEnter.setTextColor(Color.GRAY)
+            } else if (social == "After Dinner/Night") {
+                txtEnter.text = "Leave a thoughtful comment on a friend's post"
+                txtEnter.setTextColor(Color.BLACK)
+            } else {
+                txtEnter.text = "Input Invalid!"
+                txtEnter.setTextColor(Color.BLACK) 
+            }
+        }
+
     }
 }
