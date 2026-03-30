@@ -30,27 +30,38 @@ class MainActivity : AppCompatActivity() {
                 txtEnter.setTextColor(Color.RED)
             } else if (social == "Morning") {
                 txtEnter.text = "Send a Good Morning text to a family member"
-                txtEnter.setTextColor(Color.BLUE)
+                txtEnter.setTextColor(Color.CYAN)
             } else if (social == "Mid-Morning") {
                 txtEnter.text = "Reach out to a colleague with a quick Thank you"
-                txtEnter.setTextColor(Color.YELLOW)
+                txtEnter.setTextColor(Color.BLUE)
             } else if (social == "Afternoon") {
                 txtEnter.text = "Share a funny meme or interesting link with a friend"
                 txtEnter.setTextColor(Color.parseColor("#A52A2A"))
-            } else if (social == "Afternoon Snack time"){
+            } else if (social == "Afternoon Snack time") {
                 txtEnter.text = "Send a quick thinking of you message"
                 txtEnter.setTextColor(Color.parseColor("#FFA500"))
-            }else if (social == "Dinner") {
+            } else if (social == "Dinner") {
                 txtEnter.text = "Call a friend or relative for a 5 minute catch-up"
-                txtEnter.setTextColor(Color.GRAY)
+                txtEnter.setTextColor(Color.DKGRAY)
             } else if (social == "After Dinner/Night") {
                 txtEnter.text = "Leave a thoughtful comment on a friend's post"
-                txtEnter.setTextColor(Color.BLACK)
+                txtEnter.setTextColor(Color.RED)
             } else {
                 txtEnter.text = "Input Invalid!"
                 txtEnter.setTextColor(Color.BLACK)
+                btnReset.setOnClickListener {
+                    txtEnter.setTextColor(Color.BLACK)
+                    edtDay.text.clear()
+                    txtEnter.text = ""
+                }
+            }
+            btnReset.setOnClickListener {
+                txtEnter.setTextColor(Color.BLACK)
+                edtDay.text.clear()
+                txtEnter.text = ""
             }
         }
-
     }
 }
+
+
